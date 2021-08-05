@@ -58,7 +58,7 @@ class Login extends StatelessWidget {
                 Navigator.push(
                     context,
                     PageTransition(
-                        child: BottomNavigation(),
+                        child: BottomNavigation(0),
                         type: PageTransitionType.fade));
               },
               child: const Text('Login'),

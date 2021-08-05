@@ -1,8 +1,13 @@
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:waysmartkids/modals/navigation.dart';
 import 'package:waysmartkids/pages/accounts/shared/bottom-navigation-bar/placeholder-widget.dart';
 
 class BottomNavigation extends StatefulWidget {
+  BottomNavigation(int navigateToSetting) {
+    // print(navigateToSetting);
+    int _navigation = navigateToSetting;
+  }
   @override
   State<StatefulWidget> createState() {
     return _HomeState();
@@ -12,9 +17,9 @@ class BottomNavigation extends StatefulWidget {
 class _HomeState extends State<BottomNavigation> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.deepOrange),
-    PlaceholderWidget(Colors.green)
+    PlaceholderWidget(Tabs.dashboard),
+    PlaceholderWidget(Tabs.sessions),
+    PlaceholderWidget(Tabs.settings)
   ];
 
   @override
